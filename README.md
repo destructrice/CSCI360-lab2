@@ -9,7 +9,7 @@
 You can either use the environment created for lab 1 or use the following commands to create a new one.
 
 ```
-git clone YOUR-GITHUB-REPO-HERE && cd Lab2
+git clone YOUR-GITHUB-REPO-HERE && cd CSCI360-lab2
 conda env create --name cs360_lab2
 conda activate cs360_lab2
 pip install -r requirements.txt
