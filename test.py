@@ -1,10 +1,6 @@
 # Any changes to this file will not be reflected during testing and grading
 # While these are some test cases these are not the only cases used in grading
 from lab2_utils import TextbookStack, apply_sequence
-
-# from lab1_solutions import a_star_search, a_star_search
-# from lab2_solutions import a_star_search
-
 from lab2 import a_star_search
 import itertools
 import time
@@ -57,11 +53,6 @@ if __name__ == "__main__":
 
     #######################
     # Generate Examples
-    # Using lab2_solutions.py
-    #   To recreate examples switch out lab2 import for lab2_solutions
-    #   and uncomment the lines below. The solutions were used to generate
-    #   the test examples which include all acceptable paths. Students only
-    #   need to generate one.
     #######################
     stacks = [
         TextbookStack(initial_order=[3, 2, 1, 0], initial_orientations=[0, 0, 0, 0]),
@@ -119,8 +110,10 @@ if __name__ == "__main__":
         f"Tests:{n_tests} - Passed: {correct_stacks} - Confirmed Sequ: {correct_sequences}\n"
     )
 
-    # TA Note - we will probably grade up to at least n=6
-    max_n = 4
+    # TA Note - we will probably grade up to at least max_n=4
+    max_n = 5
     print("Evaluating A* on all permutations")
+    time0 = time.time()
     score = test_permutations(a_star_search, max_n)
     print(f"Passing {score*100} %")
+    print(f"Time lapse for max_n={max_n}: {time.time()-time0:.3f} seconds.")
